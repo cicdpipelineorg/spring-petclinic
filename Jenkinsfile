@@ -28,7 +28,7 @@ node('kubernetes')
 {
     stage('deploying to kubernetes')
 {
-    git 'https://github.com/cicdpipelineorg/spring-petclinic.git'
+    git url:'https://github.com/cicdpipelineorg/spring-petclinic.git', branch:'main'
     sh 'envsubst < deploy.yaml | kubectl apply -f -' 
 }
 
