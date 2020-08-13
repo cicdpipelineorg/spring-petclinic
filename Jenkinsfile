@@ -28,7 +28,7 @@ node('kubernetes')
 {
     stage('deploying to kubernetes')
 {
-    git url:'https://github.com/sujith140/kubernetes.git', branch:'main'
+    git url:'https://github.com/sujith140/kubernetes.git'
     sh 'envsubst < spring.yaml | kubectl apply -f -' 
 }
 
