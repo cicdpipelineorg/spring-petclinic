@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: spring
-        image: $imagename
+        image: sujith140/deploy:$BUILD_NUMBER
         ports:
         - containerPort: 8080
 ---
